@@ -131,7 +131,7 @@ public class Order {
         List<Product> prodList = new ArrayList<>();
         Iterator it = products.entrySet().iterator();
         while (it.hasNext()) {
-            HashMap.Entry<Product, Integer> pair = (HashMap.Entry) it.next();
+            HashMap.Entry<Product, Integer> pair = (HashMap.Entry<Product, Integer>) it.next();
             for (int i = 0; i < pair.getValue(); i++) {
                 prodList.add(new Product(pair.getKey()));
             }
