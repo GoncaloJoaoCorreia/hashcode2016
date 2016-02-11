@@ -13,7 +13,7 @@ public class Drone {
     
     public int ID;
     public Position position;
-    public int maxLoad;
+    public static int maxLoad;
     public int turn;
 
     public String deliver(Position destination) {
