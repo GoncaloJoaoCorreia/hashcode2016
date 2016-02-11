@@ -92,6 +92,7 @@ public class Reader {
         int nrWarehouses = reader.nextInt();
         for (int i = 0; i < nrWarehouses; i++) {
             Warehouse wh = getWarehouse(reader,i);
+            loadWarehouse(wh, products, reader);
             sim.warehouses.add(wh);
         }
     }
