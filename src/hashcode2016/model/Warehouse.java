@@ -16,4 +16,11 @@ public class Warehouse {
     public int ID;
     public Position position;
     public HashMap<Product, Integer> products; //Produtos/quantidade
+
+    public Warehouse() {
+        products = new HashMap<>();
+    }
+
+    
+
 }
