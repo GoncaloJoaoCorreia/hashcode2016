@@ -36,9 +36,7 @@ public class Drone {
             int turnsToDeliver = (int) Simulation.distance(this.position, order.destination) + 1;
             this.turn += turnsToDeliver;
 
-            this.position = new Position();
-            this.position.x = order.destination.x;
-            this.position.y = order.destination.y;
+            this.position = new Position(order.destination.x, order.destination.y);
 
             it.remove(); // avoids a ConcurrentModificationException
         }
@@ -61,9 +59,7 @@ public class Drone {
             int turnsToLoad = (int) Simulation.distance(this.position, p.position) + 1;
             this.turn += turnsToLoad;
 
-            this.position = new Position();
-            this.position.x = p.position.x;
-            this.position.y = p.position.y;
+            this.position = new Position(p.position.x, p.position.y);
 
             it.remove(); // avoids a ConcurrentModificationException
         }
