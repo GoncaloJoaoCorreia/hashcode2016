@@ -38,7 +38,7 @@ public class Drone {
 
             this.position = new Position(order.destination.x, order.destination.y);
 
-            it.remove(); // avoids a ConcurrentModificationException
+            //it.remove(); // avoids a ConcurrentModificationException
         }
 
         return commandList;
@@ -61,7 +61,7 @@ public class Drone {
 
             this.position = new Position(p.position.x, p.position.y);
 
-            it.remove(); // avoids a ConcurrentModificationException
+            //it.remove(); // avoids a ConcurrentModificationException
         }
 
         return commandList;
