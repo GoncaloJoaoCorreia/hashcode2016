@@ -28,7 +28,7 @@ public class Simulation {
         ArrayList<String> commands = new ArrayList<>();
         for(int i = 0; i < orders.size(); i++){
             Order o = orders.get(i);
-            ArrayList<ProductPackage> packages = o.getPackages();
+            ArrayList<ProductPackage> packages = o.getPackages(this);
             for (int j = 0; j < packages.size(); j++) {
                 ProductPackage p = packages.get(j);
                 Drone d = chooseBestDrone(p, o);
