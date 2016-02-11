@@ -15,6 +15,11 @@ import java.util.HashMap;
 public class ProductPackage {
     
     public HashMap<Product, Integer> products; //Produtos/quantidade
+    public int weight;
     public int warehouseID;
     public Position position;
+
+    public ProductPackage() {
+        products = new HashMap<>();
+    }
 }
