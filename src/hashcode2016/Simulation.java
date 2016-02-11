@@ -21,6 +21,13 @@ public class Simulation {
     public ArrayList<Drone> drones;
     public ArrayList<Order> orders;
     public ArrayList<Warehouse> warehouses;
+
+    public Simulation() {
+        drones = new ArrayList<>();
+        orders = new ArrayList<>();
+        warehouses = new ArrayList<>();
+    }
+    
     
     
     //Returns a list of all needed commands
