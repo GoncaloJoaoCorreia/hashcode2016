@@ -12,4 +12,10 @@ package hashcode2016.model;
 public class Product {
     public int ID; //Tipo
     public int weight;
+
+    public Product(Product p) {
+        this.ID = p.ID;
+        this.weight = p.weight;
+    }
+    
 }
