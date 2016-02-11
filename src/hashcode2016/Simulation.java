@@ -38,11 +38,11 @@ public class Simulation {
             for (int j = 0; j < packages.size(); j++) {
                 ProductPackage p = packages.get(j);
                 Drone d = chooseBestDrone(p, o);
-                String loadCommand = d.load(p);
-                String deliverCommand = d.deliver(o.destination);
+                ArrayList<String> loadCommand = d.load(p, o.destination);
+                ArrayList<String> deliverCommand = d.deliver(p, o);
                 //Adicionar a lista de comandos
-                commands.add(loadCommand);
-                commands.add(deliverCommand);
+                commands.addAll(loadCommand);
+                commands.addAll(deliverCommand);
             }
         }
         return commands;
@@ -64,7 +64,7 @@ public class Simulation {
         return bestDrone;
     }
 
-    private double distance(Position p, Position p2) {
+    public static double distance(Position p, Position p2) {
         double distance = Math.ceil(Math.sqrt(Math.pow(p.x - p2.x, 2) + Math.pow(p.y - p2.y, 2)));
         return distance;
     }
