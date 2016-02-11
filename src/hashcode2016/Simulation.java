@@ -43,6 +43,11 @@ public class Simulation {
     }
     
     private Drone chooseBestDrone(ProductPackage p, Order o) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Drone bestDrone = null;
+        for (int i = 0; i < drones.size(); i++) {
+            Drone d = drones.get(i);
+            //int distanceToWarehouse = Math.sqrt(d.position.x - p.position.x);
+        }
+        return null;
     }
 }

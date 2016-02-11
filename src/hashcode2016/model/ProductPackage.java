@@ -16,4 +16,5 @@ public class ProductPackage {
     
     public HashMap<Product, Integer> products; //Produtos/quantidade
     public int warehouseID;
+    public Position position;
 }
